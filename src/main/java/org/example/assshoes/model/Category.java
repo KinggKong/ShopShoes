@@ -10,7 +10,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "Categories")
+@Table(name = "Category")
 @Builder
 public class Category {
     @Id
@@ -19,7 +19,4 @@ public class Category {
 
     @Size(min = 5, message = "Tên của category không được <= 5 kí tự")
     private String name;
-
-    @OneToMany(mappedBy = "category")
-    List<Product> products;
 }
